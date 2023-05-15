@@ -8,20 +8,18 @@
 </head>
 <style>
     .title{
-        background: url("./link.jpg") no-repeat;
+        background: url("./link.jpg") no-repeat; /* 배경 이미지 파일 내에서 읽어옴 */
         margin: 50px auto 30px auto;
         height: 200px;
         width: 1200px;        
-		text-align: center;        
-        color : white;
+		text-align: center;        /* 버튼 내의 글씨 가운데 정렬 > 정렬 나중에 수정 가능*/
+        color : white; /* 글씨 색상 * > 수정 가능 */
     }
     
     .list{
-        background-color: yellow;
-        margin: 10px auto 10px auto;
+        margin: 30px auto 10px auto;
         height: 150px;
         width: 1200px;
-        /* margin: 30px; auto; 중간으로 안가요 우선 뺴놓음*/
     }
     .card{
         background-color: green;
@@ -29,12 +27,30 @@
         width: 1200px;
         margin : 30px auto 10px auto;
     }
+
+
 </style>
+</script>
 <body>
-    <H1 class = 'title'>초록색이 젤다 맞죠? </br></H1>
-    <div>
-        <h2 class = 'list'> 인물 목록</h2>
-    </div>
+    <H1 class = 'title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
+
+    <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
+            <td><button class = 'person'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
+            </button></td>
+            <td><button class = 'person'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
+            </button></td>
+            <td><button class = 'person'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
+            </button></td>
+            <td><button class = 'person'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
+            </button></td>
+            <td><button class = 'person'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
+            </button></td>
+        </table>
     <div><h2 class = "card"> 카드가 들어갈 부분</h2></div>
 </body>
 </html>
