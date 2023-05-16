@@ -15,9 +15,20 @@
 
     <!-- 지수님 - 아이콘때문에 단 링크 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <script>
+    var aynum = true; // 버튼 토클을 위한 변수
+    var jwnum = true;
+    var jsnum = true;
+    var jmnum = true;
+    var jhnum = true;
+
     $(document).ready(function () { // 프로그램 실행되자마자는 아무 카드도 안 보임
         $('.aycard').hide();
         $('.jwcard').hide();
@@ -28,6 +39,7 @@
     function Buttonreload(btn) {
         // 클릭한 id에 따라 다른 이벤트 발생하도록 함
         console.log(btn.id)
+
         switch (btn.id) {
             case "member1":
                 console.log("aycard");
@@ -36,41 +48,73 @@
                 $('.jscard').hide();
                 $('.jhcard').hide();
                 $('.jmcard').hide();
+                // 버튼 클릭 시 버튼의 메타몽 변신!
+                if (aynum == true) {
+                    $('#pic1').attr("src", "../images/aymon.jpg");
+                    //aynum = false;
+                } /* else {
+                    $('#pic2').attr("src", "https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
+                    num = true;
+                } 되돌리기 할까 말까 고민 중.. */
                 break;
+
             case "member2":
+                // 버튼 클릭 시 인물 카드 출력
                 console.log("jwcard");
                 $('.aycard').hide();
                 $('.jwcard').show();
                 $('.jscard').hide();
                 $('.jhcard').hide();
                 $('.jmcard').hide();
+                // 버튼 클릭 시 버튼의 메타몽 변신!
+                if (jwnum == true) {
+                    $('#pic2').attr("src", "../images/jwmon.jpg");
+                }
                 break;
             case "member3":
+                // 버튼 클릭 시 인물 카드 출력
                 console.log("jscard");
                 $('.aycard').hide();
                 $('.jwcard').hide();
                 $('.jscard').show();
                 $('.jhcard').hide();
                 $('.jmcard').hide();
+                // 버튼 클릭 시 버튼의 메타몽 변신!
+                if (jsnum == true) {
+                    $('#pic3').attr("src", "../images/jsmon.png");
+                }
                 break;
+
             case "member4":
+                // 버튼 클릭 시 인물 카드 출력
                 console.log("jhcard");
                 $('.aycard').hide();
                 $('.jwcard').hide();
                 $('.jscard').hide();
                 $('.jhcard').show();
                 $('.jmcard').hide();
+                // 버튼 클릭 시 버튼의 메타몽 변신!
+                if (jhnum == true) {
+                    $('#pic4').attr("src", "../images/jhmon.jpg");
+                }
                 break;
+
             default:
+                // 버튼 클릭 시 인물 카드 출력
                 console.log("jmcard");
                 $('.aycard').hide();
                 $('.jwcard').hide();
                 $('.jscard').hide();
                 $('.jhcard').hide();
                 $('.jmcard').show();
+                // 버튼 클릭 시 버튼의 메타몽 변신!
+                if (jmnum == true) {
+                    $('#pic5').attr("src", "../images/jmmon.jpg");
+                }
                 break;
         }
     }
+
 </script>
 
 <body>
@@ -78,37 +122,37 @@
 
     <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
         <td><button onclick="Buttonreload(this)" id='member1'>
-                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
-                    width="200px" ,>
+                <img id='pic1' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
+                    , width="200px">
             </button></td>
         <td><button onclick="Buttonreload(this)" id='member2'>
-                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
-                    width="200px" ,>
+                <img id='pic2' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
+                    , width="200px">
             </button></td>
         <td><button onclick="Buttonreload(this)" id='member3'>
-                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
-                    width="200px" ,>
+                <img id='pic3' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
+                    , width="200px">
             </button></td>
         <td><button onclick="Buttonreload(this)" id='member4'>
-                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
-                    width="200px" ,>
+                <img id='pic4' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
+                    , width="200px">
             </button></td>
         <td><button onclick="Buttonreload(this)" id='member5'>
-                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
-                    width="200px" ,>
+                <img id='pic5' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
+                    , width="200px">
             </button></td>
     </table>
     <div class="cards">
         <div class="aycard">
-            <h1> ✨조아영의 카드✨</h1>
+            <h1> ✨ALL ABOUT 조아영✨</h1>
             <TABLE class="aytable">
                 <TD>
-                <TH rowspan="7"> <img src="../images/ayphoto2.jpg" , width="320px">
+                <TH rowspan="7"> <img src="../images/ayphoto.jpg" , width="320px">
                     <TR>
                         <TH> 자신에 대한 설명 & MBTI
                     <TR>
-                        <TD>백앤드 취업을 희망하는 짭전공생입니다 </br>
-                            핑크색💗커비💫젤다⚔️뜨개질🧶디저트🍧를 좋아해요!</br>
+                        <TD>백앤드 취업을 희망하는 짭전공자입니다 </br>
+                            핑크색💗커비💫젤다⚔️마블🦸뜨개질🧶디저트🍧를 좋아해요!</br>
                             ESFP입니다 그것도 파워 F.. 극한의 공감쟁이
                     <TR>
                         <TH>객관적인 자신의 장점
@@ -214,42 +258,37 @@
             </div>
         </div>
         <div class="jmcard">
-            <div class="box">
-                <div class="jmleft">
-                    <div class="alert alert-success" role="alert">
-                        <p>자신에 대한 설명 및 MBTI</p>
-                        <p id="jmans1">
-                            개발자 취업 준비 중인 INTJ입니다~<br>
-                            최강 집순이라 집에서 할 수 있는 것을 좋아합니다.
-                        </p>
-                    </div>
-                    <div class="alert alert-success" role="alert">
-                        <p>객관적인 자신의 장점</p>
-                        <p id="jmans2">
-                            잘 안되면 될 때까지 하는 편입니다.
-                        </p>
-                    </div>
-                    <div class="alert alert-success" role="alert">
-                        <p>자신의 협업 스타일 소개</p>
-                        <p id="jmans3">
+                <div class="jmbox">
+        <div class="jmleft">
+            <div class="alert alert-success" role="alert">
+                <p>자신에 대한 설명 및 MBTI</p>
+                <p id="jmans1">
+                    개발자 취업 준비 중인 INTJ입니다~<br>
+                    최강 집순이라 집에서 할 수 있는 것을 좋아합니다.
+                </p></div>
+            <div class="alert alert-success" role="alert">
+                <p>객관적인 자신의 장점</p>
+                <p id="jmans2">
+                    잘 안되면 될 때까지 하는 편입니다.
+                </p></div>
+            <div class="alert alert-success" role="alert">
+                <p>자신의 협업 스타일 소개</p>
+                <p id="jmans3">
 
-                        </p>
-                    </div>
-                </div>
-                <div class="jmright">
-                    <h3><b>박주민</b></h3>
-                    <div class="pic" id="jmprofileimg"></div>
-                    <a id="jmblogaddr" href="https://velog.io/@j2mie561"><button type="button" class="btn btn-light">블로그
-                            보러가기!</button></a>
-                </div>
-            </div>
+                </p></div>
+        </div>
+        <div class="jmright">
+            <h3><b>박주민</b></h3>
+            <div class="jmpic" id="jmprofileimg"></div>
+            <a id="jmblogaddr" href="https://velog.io/@j2mie561"><button type="button" class="btn btn-light">블로그 보러가기!</button></a>
+        </div>
+    </div>
         </div>
         <div class="jhcard">
             <!--진희님 내용 본인 카드 내용 자유롭게 구현하세요!
             배경으로 깔린 카드에 margin 적용되어있으므로 적용 안 하셔도 됩니다
             -->
         </div>
-
     </div>
 
 </body>

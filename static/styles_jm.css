@@ -4,7 +4,7 @@
     position: absolute;
     margin:auto;
 }
-    .box {
+    .jmbox {
         background-color: #DDFFBB;
         border: 1px solid;
         margin: 50px auto 30px auto;
@@ -32,25 +32,13 @@
         /* border: 1px solid; */
     }
 
-    .pic {
+    .jmpic {
         max-width: 530px;
         height: 300px;
         background-color: azure;
         margin: 0px 0px 10px 0px;
     }
 
-    .right>button {
+    .jmright>button {
         margin-top: 100px;
-    }
-
-    textarea {
-        vertical-align: middle;
-        width: 90%;
-        height: 50px;
-    }
-    .con{
-        margin-top: 10px;
-        width: 100%;
-        height: 200px;
-        border: 1px solid black;
     }
