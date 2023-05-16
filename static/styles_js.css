@@ -11,50 +11,138 @@
 
      .jscard {
          background-color: #c9a7eb;
-
          width: 1200px;
          height: 600px;
-
          border-radius: 100px;
          color: white;
+         float: center;
+         margin: 0px 0px 20px 0px;
 
-         padding: 30px 0px 30px 0px;
-
-
-         position: absolute;
      }
 
      .jsleft {
          background-color: #ecc9ee;
-         width: 45%;
-         height: 100%;
-         margin: 0px 1% 0px 4%;
+         width: 585px;
+         height: 580px;
+         margin: 10px 5px 10px 10px;
          border-radius: 100px;
          text-align: center;
+         float:left;
+         
+     }
+
+     #jsfirst {
+        text-shadow: 3px 3px 3px gray;
+     }
+
+
+     .jsleftpic1 {
+         background-color: aliceblue;
+         width: 50%;
+         height: 240px;
+         margin: 0px 0px 0px 10px;
+         border-radius: 80px;
+         float: left;
+         background-image: url('../images/js1.jpg');
+         background-position: center;
+         background-size: cover;
+     }
+
+     .jsleftwriting1 {
+         float: left;
+         margin: 0px 0px 0px 0px;
+         padding: 0px 0px 0px 10px;
+         width: 270px;
+         height: 240px;
+         line-height: 30px;
+         text-align: left;
+         color: rgb(44, 44, 44);
+     }
+
+     .jsleftpic2 {
+         background-color: aliceblue;
+         width: 50%;
+         height: 250px;
+         margin: 5px 0px 0px 10px;
+         border-radius: 80px;
+         float: left;
+         background-image: url('../images/js2.jpg');
+         background-position: center;
+         background-size: cover;
+     }
+
+     .jsleftwriting2 {
+         float: left;
+         width: 270px;
+         height: 260px;
+         padding: 0px 0px 0px 10px;
+         line-height: 30px;
+         text-align: left;
+         color: rgb(44, 44, 44);
      }
 
      .jsright {
          background-color: #ecc9ee;
-         width: 45%;
+         width: 585px;
          border-radius: 100px;
-         height: 100%;
-         margin: 0px 4% 0px 1%;
+         height: 580px;
+         margin: 10px 10px 10px 5px;
          text-align: center;
-         position: relative;
+         float: right;
+         color: rgb(44, 44, 44);
      }
 
      .jsrighttitle {
          text-align: center;
+         color:white;
+         text-shadow: 3px 3px 3px gray;
+     }
+
+     #jsstar {
+         font-size: 35px;
+     }
+
+     .jsrightpic {
+         background-color: aliceblue;
+         width: 330px;
+         height: 330px;
+         margin: 0px 0px 0px 10px;
+         border-radius: 80px;
+         float: left;
+         background-image: url('../images/js3.jpg');
+         background-position: center;
+         background-size: cover;
+     }
+
+     .jsrightwriting {
+         width: 235px;
+         padding-left: 10px;
+         height: 330px;
+         float: right;
+         text-align: left;
+         line-height: 30px;
+     }
+
+     .jsright2 {
+         clear:both;
+         width: 560px;
+         height: 140px;
+         margin: 0px 0px 0px 0px;
+         text-align: left;
+         padding: 1px 0px 0px 20px;
      }
 
      .jisooaddr {
-         margin: 0px 20px 0px 0px;
-         position: absolute;
-         bottom: 20px;
-         right: 40px;
-         font-size: 20px;
+        clear:both;
+        font-size: 20px;
+        text-align:right;
+        padding-right: 70px;
      }
 
-     .jsbi {
-         font-size: 35px;
+     .jisooaddr:hover {
+         font-weight: bold;
+     }
+
+     #jslast {
+        text-align: center;
      }
