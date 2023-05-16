@@ -34,8 +34,9 @@
 
     .jmpic {
         max-width: 530px;
-        height: 300px;
-        background-color: azure;
+        height: 400px;
+        background: url("../images/member_jumin.jpg");
+        background-size: cover;
         margin: 0px 0px 10px 0px;
     }
 
