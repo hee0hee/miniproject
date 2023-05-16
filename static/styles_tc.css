@@ -2,7 +2,7 @@
 
 /* 카드 사이즈는 1200 600 */
   .jwcard {
-    /* background-color: green; */
+    
     height: 600px;
     width: 1200px;
     margin: auto;
@@ -55,14 +55,16 @@
 
  .jwleft {
     width: 720px;
+    height: 600px;
     float: left;
     box-sizing: border-box;
     border: none;
-
-    /* background: #ff0; */
+    background: #FFFAF4;
   }
 
   .jwans1 {
+    font-weight: bold;
+    font-size : 30px;
     width: 500px;
     height: 150px;
     border: 3px solid;
@@ -70,3 +72,9 @@
     border-radius: 15px;
     text-align: center;
   }
+ 
+   .jwans2 {
+    font-size : 18px;
+    font-weight: 500;
+    margin-top: 5px;
+   }
