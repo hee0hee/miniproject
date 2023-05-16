@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 @app.route('/')
 def home():
-    return render_template('card.html') 
+    return render_template('main.html') 
 # 우선 메인페이지 연결함
 
 @app.route("/intro", methods=["POST"])
