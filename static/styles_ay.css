@@ -34,26 +34,33 @@
 
     /* 아영님 카드 관련 css */
     .aycard {
+        font-family: 'AYcard';
         background-image: url("../images/kirbywallpaper.jpg");
         height: 600px;
         width: 1200px;
-        font-family: 'AYcard';
         position: absolute;
         margin:auto;
     }
 
     .aycard table{
-        font-size: 30px ;
-        color: black;
         width: 1200px;
         text-align: center;
     }
+    .aycard th,td{
+        font-family: 'AYcard';
+        font-size: 25px;
+        color: black;
+        padding:0px;
+
+    }
     .aycard h1{
-        color: rgb(30, 169, 255);
+        font-family: 'AYcard';
+        color:deeppink;
         font-size: 50px;
         margin : auto;
+        padding-top: 10px;
         width: 500px;
-        text-shadow: 2PX 2PX 0 gray;
+        text-shadow: 2PX 3PX 0 lightgray;
     }
 
     .aycard img{
