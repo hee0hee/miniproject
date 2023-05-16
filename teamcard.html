@@ -29,30 +29,43 @@
     }
 </style>
 <script>
-    function Buttonreload(){  /* 버튼 클릭 시 카드 부분만 reload */
+    function Buttonreload(btn) { /* 버튼 클릭 시 카드 부분만 reload */
        $("#card").load(window.location.href + "#card");
-       var id_check = $(this).attr("id");
-       console.log(id_check);
-     
+       
+       console.log(btn.id);
+
+        // 클릭한 id에 따라 다른 이벤트 발생하도록 함
+       switch(btn.id){
+            case member1:
+                break;
+            case member2:
+                break;
+            case member3:
+                break;
+            case member4:
+                break;
+            default:
+                break;
+       }
     }
 </script>
 <body>
     <H1 class = 'title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
 
     <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
-            <td><button onclick = "Buttonreload()" id = 'person1'>
+            <td><button onclick = "Buttonreload(this)" id = 'member1'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button onclick = "Buttonreload()" class = "person2">
+            <td><button onclick = "Buttonreload(this)" id = 'member2'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button onclick = "Buttonreload()" class = "person2">
+            <td><button onclick = "Buttonreload(this)" id = 'member3'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button onclick = "Buttonreload()" class = "person2">
+            <td><button onclick = "Buttonreload(this)" id = 'member4'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button onclick = "Buttonreload()" class = "person2">
+            <td><button onclick = "Buttonreload(this)" id = 'member5'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
         </table>
