@@ -31,7 +31,6 @@
         margin: 30px auto 10px auto;
         position:relative;
     }
-
     /* 아영님 카드 관련 css */
     .aycard {
         font-family: 'AYcard';
@@ -43,8 +42,9 @@
     }
 
     .aycard table{
-        width: 1200px;
+        width: 1000px;
         text-align: center;
+        margin: 10px auto;
     }
     .aycard th,td{
         font-family: 'AYcard';
@@ -58,7 +58,7 @@
         color:deeppink;
         font-size: 50px;
         margin : auto;
-        padding-top: 10px;
+        padding-top: 20px;
         width: 500px;
         text-shadow: 2PX 3PX 0 lightgray;
     }
@@ -67,3 +67,9 @@
         border-radius: 20px;
     }
 
+    .ayblog{
+        font-family: 'AYcard';
+        padding-top:10px;
+        color: hotpink;
+        font-size :20px;
+    }
