@@ -7,7 +7,7 @@
     }
 
     .title {
-        border: solid;
+        border: black solid;
         width: 1200px;
         height: 300px;
         text-align: center;
