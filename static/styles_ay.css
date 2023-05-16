@@ -1,0 +1,69 @@
+/* teamcard.html 관련 css */
+
+@font-face {
+    font-family: 'AYcard'; /*font 이름*/
+    font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+    font-weight: 400; /* font 굵기 정의 */
+    src: url('../fonts/BR.otf');  /* 파일 위치 정의 */
+}
+
+    .title {
+        background: url("../images/link.jpg") no-repeat;
+        /* 배경 이미지 파일 내에서 읽어옴 */
+        margin: 50px auto 30px auto;
+        height: 200px;
+        width: 1200px;
+        text-align: center;
+        /* 버튼 내의 글씨 가운데 정렬 > 정렬 나중에 수정 가능*/
+        color: white;
+        /* 글씨 색상 * > 수정 가능 */
+    }
+
+    .list {
+        margin: 30px auto 10px auto;
+        height: 150px;
+        width: 1200px;
+    }
+
+    .cards {
+        height: 600px;
+        width: 1200px;
+        margin: 30px auto 10px auto;
+        position:relative;
+    }
+
+    /* 아영님 카드 관련 css */
+    .aycard {
+        font-family: 'AYcard';
+        background-image: url("../images/kirbywallpaper.jpg");
+        height: 600px;
+        width: 1200px;
+        position: absolute;
+        margin:auto;
+    }
+
+    .aycard table{
+        width: 1200px;
+        text-align: center;
+    }
+    .aycard th,td{
+        font-family: 'AYcard';
+        font-size: 25px;
+        color: black;
+        padding:0px;
+
+    }
+    .aycard h1{
+        font-family: 'AYcard';
+        color:deeppink;
+        font-size: 50px;
+        margin : auto;
+        padding-top: 10px;
+        width: 500px;
+        text-shadow: 2PX 3PX 0 lightgray;
+    }
+
+    .aycard img{
+        border-radius: 20px;
+    }
+
