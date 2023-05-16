@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Document</title>
+    <link href="../static/styles.css" rel="stylesheet" />
+</head>
+
+<script>
+    function Buttonreload(btn) {
+
+        console.log(btn.id);
+
+        // 클릭한 id에 따라 다른 이벤트 발생하도록 함
+        switch (btn.id) {
+            case member1:
+                break;
+            case member2:
+                break;
+            case member3:
+                break;
+            case member4:
+                break;
+            default:
+                break;
+        }
+
+
+        $("#card").load(window.location.href + "#card"); /* 카드 부분만 reload */
+    }
+</script>
+
+<body>
+    <H1 class='title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
+
+    <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
+        <td><button onclick="Buttonreload(this)" id='member1'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
+                    width="200px" ,>
+            </button></td>
+        <td><button onclick="Buttonreload(this)" id='member2'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
+                    width="200px" ,>
+            </button></td>
+        <td><button onclick="Buttonreload(this)" id='member3'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
+                    width="200px" ,>
+            </button></td>
+        <td><button onclick="Buttonreload(this)" id='member4'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
+                    width="200px" ,>
+            </button></td>
+        <td><button onclick="Buttonreload(this)" id='member5'>
+                <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg" ,
+                    width="200px" ,>
+            </button></td>
+    </table>
+    <div card>
+        <div class="aycard">
+            <h1> ✨조아영의 카드✨</h1>
+            <TABLE>
+                <TD>
+                <TH rowspan="7"> <img src="../images/ayphoto2.jpg", width="350px">
+                    <TR>
+                        <TH> 자신에 대한 설명 & MBTI
+                    <TR>
+                        <TD>백앤드 취업을 희망하는 짭전공생입니다 </br>
+                            핑크색💗커비💫젤다⚔️뜨개질🧶디저트🍧를 좋아해요!</br>
+                            ESFP입니다 그것도 파워 F.. 극한의 공감쟁이
+                    <TR>
+                        <TH>객관적인 자신의 장점
+                    <TR>
+                        <TD>낯을 별로 가리지 않습니다 </br>
+                            소외되는 분이 없도록 챙기려고 노력합니다
+                    <TR>
+                        <TH>자신의 협업 스타일 소개
+                    <TR>
+                        <TD>팀원끼리 의견을 많이 내고 협의점을 찾는 게 좋습니다 </br>
+                            각자 집중하는 시간엔 집중하고, 상의도 열심히 해요!!
+            </TABLE>
+        </div>
+        <div class="jwcard">
+            <div class="left">
+                <div class="ans1"> MBTI<br>
+                    mbti 안믿습니다. 안팔아요 저리가세요
+    
+                </div>
+                <div class="ans1">객관적인 자신의 장점</div>
+                <div class="ans1">자신의 협업 스타일 소개</div>
+    
+            </div>    
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
