@@ -4,3 +4,53 @@
     position: absolute;
     margin:auto;
 }
+    .box {
+        background-color: #DDFFBB;
+        border: 1px solid;
+        margin: 50px auto 30px auto;
+        height: 700px;
+        width: 1200px;
+        text-align: center;
+        padding: 10px 15px 10px 10px;
+    }
+
+    .jmleft {
+        width: 640px;
+        height: 420px;
+        float: left;
+        padding: 15px;
+        /* border: 1px solid; */
+
+    }
+
+    .jmright {
+        width: 530px;
+        height: 420px;
+        float: right;
+        padding: 5px 10px;
+        text-align: right;
+        /* border: 1px solid; */
+    }
+
+    .pic {
+        max-width: 530px;
+        height: 300px;
+        background-color: azure;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .right>button {
+        margin-top: 100px;
+    }
+
+    textarea {
+        vertical-align: middle;
+        width: 90%;
+        height: 50px;
+    }
+    .con{
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;
+        border: 1px solid black;
+    }
