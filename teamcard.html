@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <title>Document</title>
 </head>
 <style>
@@ -26,26 +27,32 @@
         width: 1200px;
         margin : 30px auto 10px auto;
     }
-
-
 </style>
+<script>
+    function Buttonreload(){  /* 버튼 클릭 시 카드 부분만 reload */
+       $("#card").load(window.location.href + "#card");
+       var id_check = $(this).attr("id");
+       console.log(id_check);
+     
+    }
+</script>
 <body>
     <H1 class = 'title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
 
     <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
-            <td><button class = 'person'>
+            <td><button onclick = "Buttonreload()" id = 'person1'>
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button class = 'person'>
+            <td><button onclick = "Buttonreload()" class = "person2">
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button class = 'person'>
+            <td><button onclick = "Buttonreload()" class = "person2">
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button class = 'person'>
+            <td><button onclick = "Buttonreload()" class = "person2">
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
-            <td><button class = 'person'>
+            <td><button onclick = "Buttonreload()" class = "person2">
                 <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg", width="200px", >
             </button></td>
         </table>
