@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: 'AYcard'; /*font 이름*/
+    font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+    font-weight: 400; /* font 굵기 정의 */
+    src: url('../fonts/BR.otf');  /* 파일 위치 정의 */
+}
+
+    .title {
+        background: url("../images/link.jpg") no-repeat;
+        /* 배경 이미지 파일 내에서 읽어옴 */
+        margin: 50px auto 30px auto;
+        height: 200px;
+        width: 1200px;
+        text-align: center;
+        /* 버튼 내의 글씨 가운데 정렬 > 정렬 나중에 수정 가능*/
+        color: white;
+        /* 글씨 색상 * > 수정 가능 */
+    }
+
+    .list {
+        margin: 30px auto 10px auto;
+        height: 150px;
+        width: 1200px;
+    }
+
+    .card {
+        height: 600px;
+        width: 1200px;
+        margin: 30px auto 10px auto;
+    }
+
+    .aycard {
+        background-image: url("../images/kirbywallpaper.jpg");
+        height: 600px;
+        width: 1200px;
+        margin:auto;
+        font-family: 'AYcard';
+
+    }
+
+    .aycard table{
+        font-size: 30px ;
+        color: black;
+        width: 1200px;
+        text-align: center;
+    }
+
+    .aycard h1{
+        color: rgb(30, 169, 255);
+        font-size: 50px;
+        margin : auto;
+        width: 500px;
+        text-shadow: 2PX 2PX 0 gray;
+    }
+
+    .aycard img{
+        border-radius: 20px;
+    }
