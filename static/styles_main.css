@@ -1,3 +1,5 @@
+/* 초기 페이지 관련 CSS입니다. */
+
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
 
     * {
@@ -6,31 +8,39 @@
 
     .title {
         border: solid;
-        width: 900px;
-        height: 400px;
+        width: 1200px;
+        height: 300px;
         text-align: center;
         margin: auto;
-        background-image: url('https://i.postimg.cc/rm4bq8jd/9962-F6415-B10-FCD134.jpg');
+        /* 배경이미지"만" 투명도 설정 */
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/rm4bq8jd/9962-F6415-B10-FCD134.jpg');
         background-position: center;
         background-size: cover;
         font-size: 90px;
         font-weight: 400;
-        padding: 40px 0px 0px 0px;
+        color: rgb(0, 255, 0);
+        padding: 60px 0px 0px 0px;
         border-radius: 2px;
-    }
+        }
 
     .team_info {
         border: solid;
         margin: 20px auto;
-        width: 550px;
-        height: 150px;
+        width: 750px;
+        height: 300px;
         text-align: center;
         border-radius: 5px;
+        font-size : 40px;
+        font-weight: 500;
+    }
+    .team_info_detail {
+        font-size : 20px;
     }
 
     .thumbup {
-        width: 150px;
-        height: 200px;
+        width: 200px;
+        height: 250px;
         background-image: url('https://pbs.twimg.com/tweet_video_thumb/E07M16dVgAEOB0C.jpg');
         background-position: center;
         background-size: cover;
@@ -44,8 +54,8 @@
     .team_meet {
         text-align: center;
         margin: 10px auto 150px auto;
-        width: 500px;
-        height: 50px;
+        width: 550px;
+        height: 80px;
         border: solid;
-        font-size: 30px;
+        font-size: 40px;
     }
