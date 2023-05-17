@@ -163,7 +163,8 @@
 
         fetch('/ayintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
-            window.location.reload();
+            Buttonreload("member1");
+            $('#aycomment').val('');
         })
     }
 
@@ -175,7 +176,8 @@
 
         fetch('/jwintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
-            window.location.reload();
+            Buttonreload("member2");
+            $('#jwcomment').val('');
         })
     }
 
@@ -187,7 +189,8 @@
 
         fetch('/jsintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
-            window.location.reload();
+            Buttonreload("member3");
+            $('#jscomment').val('');
         })
     }
 
@@ -199,7 +202,8 @@
 
         fetch('/jhintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
-            window.location.reload();
+            Buttonreload("member4");
+            $('#jhcomment').val('');
         })
     }
 
@@ -211,7 +215,8 @@
 
         fetch('/jmintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
-            window.location.reload();
+            Buttonreload("default");
+            $('#jmcomment').val('');
         })
     }
 
