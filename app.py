@@ -8,12 +8,19 @@ db = client.dbsparta
 import requests
 from bs4 import BeautifulSoup
 
-# 위 순서는 상관없다. flask에서 하고 있기 때문에 보기 좋게 가장 위에 올려놨을뿐!
-
 @app.route('/')
 def home():
     return render_template('main.html') 
 # 우선 메인페이지 연결함
+
+@app.route('/page2')
+def page2():
+    return render_template('page2.html') 
+
+@app.route('/teamcard')
+def team():
+    return render_template('teamcard.html') 
+
 
 @app.route("/intro", methods=["POST"])
 def intro_post():
