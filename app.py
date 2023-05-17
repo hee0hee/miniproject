@@ -19,6 +19,9 @@ def home():
 def page2():
     return render_template('page2.html') 
 
+@app.route('/teamcard')
+def team():
+    return render_template('teamcard.html') 
 
 
 @app.route("/intro", methods=["POST"])
