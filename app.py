@@ -6,7 +6,7 @@ from pymongo import MongoClient
 import certifi
 
 ca = certifi.where()
-client = MongoClient('mongodb+srv://sparta:test@cluster0.q7dgkca.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://JongWoo:use9563@mini.uajgqga.mongodb.net/?retryWrites=true&w=majority  ')
 db = client.dbsparta
 
 import requests
