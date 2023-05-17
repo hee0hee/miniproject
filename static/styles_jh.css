@@ -68,12 +68,29 @@
     padding: 0 10% ;
 }
 
-.form-select {
+.form-check-label {
     color: black;
 }
 
+.form-select {
+    color: black;
+    margin: 0 0 5px 0;
+}
+
+.form-check-input {
+    margin: 0 0 0 5px;
+}
+
+.form-check {
+    margin: 0 0 0 5px;
+}
+
+.jhveloglink {
+    margin: -20px 0 0 5px;
+}
+
 .jhSlidesbackground {
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
 
 }
