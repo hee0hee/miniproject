@@ -6,6 +6,23 @@
     font-weight: 400; /* font 굵기 정의 */
     src: url('../fonts/BR.otf');  /* 파일 위치 정의 */
 }
+/* 반짝 */
+@-webkit-keyframes sparkle {
+    from {
+      background-position: 0% 100%;
+    }
+    to {
+      background-position: 200% 100%;
+    }
+  }
+  @keyframes sparkle {
+    from {
+      background-position: 0% 100%;
+    }
+    to {
+      background-position: 200% 100%;
+    }
+  }
 
     .title {
         background: url("../images/link.jpg") no-repeat;
@@ -39,8 +56,25 @@
         width: 1200px;
         position: absolute;
         margin:auto;
+        border-radius: 4px;
+        display: inline-block;
     }
-
+    .aycard:before {
+        -webkit-animation: sparkle 4s infinite linear;
+                animation: sparkle 4s infinite linear;
+        background: linear-gradient(90deg, #7FEFBD 3%, #FFF689 11%, #ff1dd2 22%, #7FEFBD 33%, #FFF689 41%, #ff94fb 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
+        background-size: 300% 100%;
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        width: 102%;
+        height: 102%;
+        border-radius: 4px;
+        filter: blur(3px);
+        z-index: -1;
+        transform: scale(0.99) translateY(3px);
+      }
     .aycard table{
         width: 1000px;
         text-align: center;
@@ -59,8 +93,9 @@
         font-size: 50px;
         margin : auto;
         padding-top: 20px;
-        width: 500px;
+        width: 530px;
         text-shadow: 2PX 3PX 0 lightgray;
+        font-weight: 700;
     }
 
     .aycard img{
