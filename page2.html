@@ -93,7 +93,7 @@
         text-decoration: none;
         color: #000000;
         font-weight: bold; */
-        background-size: 135px 135px;
+        background-size: 155px 155px;
         background-image:url("../images/jhmon.jpg");
     }
 
@@ -114,7 +114,9 @@
         text-decoration: none;
         color: #000000;
         font-weight: bold; */
-        background-size: 140px 140px;
+
+        /* background-position: 50px, 0; */
+        /* background-size: 140px 140px; */
         background-image:url("../images/jmmon.jpg");
     }
 
@@ -163,34 +165,34 @@
     }
 </style>
 
-<!-- <script>
+<script language = "javascript">
+    name = "member1"
+    location.href = "teamcard.html?" + name
+</script>
 
-    function m_card1() {
-        Buttonreload(member1)
-        Buttonreload(this) == id="member1";
-        module.exports = { member1 };
-        window.location.assign("teamcard.html");
-        memeber == member1
-    }
-
-    export {member1};
-</script> -->
-
-<!-- <img src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"> -->
+<script language = "javascript">
+    function sendFunc(aValue) {
+        name = "abcd";
+        jumsu = 100;
+        location.href="teamcard.html?" +name;
+}
+</script>
 
 <body>
     <H1 class='title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
+
+    <a href="#" onclick="javascript:sendFunc('1:3:1')">ddd</a>
 
     <table class="tg">
         <tbody>
             <tr>
                 <td class="tg-ojej"></td>
                 <td rowspan="4" colspan="2" class="tg-ojej">
-                    <div class="btn2"></div>
+                    <a href="teamcard.html"><div class="btn2" id="member1"></div></a>
                 </td>
 
                 <td class="tg-ojej">
-                    <div class="btn1" id="member1" onclick="m_card1()"></div>
+                    <div class="btn1" id="member1"></div>
                 </td>
 
                 <td rowspan="4" colspan="2" class="tg-ojej">
