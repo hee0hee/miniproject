@@ -15,7 +15,7 @@
 
     <!-- 지수님 - 아이콘때문에 단 링크 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -36,11 +36,11 @@
         $('.jhcard').hide();
         $('.jmcard').hide();
     });
-    function Buttonreload(btn) {
+    function Buttonreload(mem) {
         // 클릭한 id에 따라 다른 이벤트 발생하도록 함
-        console.log(btn.id)
+        console.log(mem)
 
-        switch (btn.id) {
+        switch (mem) {
             case "member1":
                 console.log("aycard");
                 $('.aycard').show();
@@ -113,6 +113,9 @@
                 }
                 break;
         }
+
+
+
     }
 
 </script>
@@ -121,23 +124,23 @@
     <H1 class='title' onClick="location.href='main.html'">초록색이 젤다 맞죠? </br></H1> <!-- 클릭 시 메인으로 가는 타이틀 이미지버튼-->
 
     <table class='list'> <!-- 사용자 이미지 추후에 삽입 / DB에서 읽어오기, 200*200PX 이미지 권장. 임시로 이미지 삽입함-->
-        <td><button onclick="Buttonreload(this)" id='member1'>
+        <td><button onclick="Buttonreload(this.id)" id='member1'>
                 <img id='pic1' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
                     , width="200px">
             </button></td>
-        <td><button onclick="Buttonreload(this)" id='member2'>
+        <td><button onclick="Buttonreload(this.id)" id='member2'>
                 <img id='pic2' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
                     , width="200px">
             </button></td>
-        <td><button onclick="Buttonreload(this)" id='member3'>
+        <td><button onclick="Buttonreload(this.id)" id='member3'>
                 <img id='pic3' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
                     , width="200px">
             </button></td>
-        <td><button onclick="Buttonreload(this)" id='member4'>
+        <td><button onclick="Buttonreload(this.id)" id='member4'>
                 <img id='pic4' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
                     , width="200px">
             </button></td>
-        <td><button onclick="Buttonreload(this)" id='member5'>
+        <td><button onclick="Buttonreload(this.id)" id='member5'>
                 <img id='pic5' src="https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg"
                     , width="200px">
             </button></td>
@@ -211,7 +214,7 @@
                         <h3></h3>
                     </div>
                     <div class="jsleftwriting2">
-                        
+
                         <h2>나의 협업 스타일🤝</h2>
                         <h3>팀에 따라 달라져요! 묵묵히 일만 하는게 좋은 스타일도. 수다떨면서 일하고 싶은 스타일도. 잘 맞춰가면서 할 수 있어요!</h3>
                     </div>
@@ -258,38 +261,207 @@
             </div>
         </div>
         <div class="jmcard">
-                <div class="jmbox">
-        <div class="jmleft">
-            <div class="alert alert-success" role="alert">
-                <p>자신에 대한 설명 및 MBTI</p>
-                <p id="jmans1">
-                    개발자 취업 준비 중인 INTJ입니다~<br>
-                    최강 집순이라 집에서 할 수 있는 것을 좋아합니다.
-                </p></div>
-            <div class="alert alert-success" role="alert">
-                <p>객관적인 자신의 장점</p>
-                <p id="jmans2">
-                    장점이자 단점이지만<br>
-                    잘 안되면 될 때까지 하는 편입니다.</p></div>
-            <div class="alert alert-success" role="alert">
-                <p>자신의 협업 스타일 소개</p>
-                <p id="jmans3">
-                    정보를 주고 받는 걸 좋아해서 많이 알려주고 많이 물어봅니다.<br>
-                    도움되는 사람이 되도록 노력합니다!</p></div>
-        </div>
-        <div class="jmright">
-            <h3><b>박주민</b></h3>
-            <div class="jmpic" id="jmprofileimg"></div>
-            <a id="jmblogaddr" href="https://velog.io/@j2mie561"><button type="button" class="btn btn-light">블로그 보러가기!</button></a>
-        </div>
-    </div>
+            <div class="jmbox">
+                <div class="jmleft">
+                    <div class="alert alert-success" role="alert">
+                        <p>자신에 대한 설명 및 MBTI</p>
+                        <p id="jmans1">
+                            개발자 취업 준비 중인 INTJ입니다~<br>
+                            최강 집순이라 집에서 할 수 있는 것을 좋아합니다.
+                        </p>
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        <p>객관적인 자신의 장점</p>
+                        <p id="jmans2">
+                            잘 안되면 될 때까지 하는 편입니다.
+                        </p>
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        <p>자신의 협업 스타일 소개</p>
+                        <p id="jmans3">
+
+                        </p>
+                    </div>
+                </div>
+                <div class="jmright">
+                    <h3><b>박주민</b></h3>
+                    <div class="jmpic" id="jmprofileimg"></div>
+                    <a id="jmblogaddr" href="https://velog.io/@j2mie561"><button type="button" class="btn btn-light">블로그
+                            보러가기!</button></a>
+                </div>
+            </div>
         </div>
         <div class="jhcard">
-            <!--진희님 내용 본인 카드 내용 자유롭게 구현하세요!
-            배경으로 깔린 카드에 margin 적용되어있으므로 적용 안 하셔도 됩니다
-            -->
+            <span calss="jhallt">
+
+                <div class="jhtext2"></div>
+                <div class="jhtext3"></div>
+                <div class="jhtext4"></div>
+            </span>
+
+
+            <table class="jhtg">
+                <tbody>
+                    <tr>
+                        <td class="jhtext0">
+                            <div class="jhtext0">
+                        </td>
+
+                        <td class="jhtextti">
+                            <div class="jhtitle">
+                                <h3><b>진희의 CARD📌</b></h3>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="jhtext1">
+                            <div class="jhtext1-1">
+                                <div class="form-check1">
+
+                                    <select class="form-select" aria-label="Disabled select example" disabled>
+                                        <option selected>[자신]에 대한 설명 및 MBTI</option>
+                                    </select>
+
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="flexCheckCheckedDisabled" checked disabled>
+                                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                        나는 ENTJ!
+                                    </label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled"
+                                            disabled>
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                            통솔자(ENTJ)는 타고난 지도자라고 할 수 있습니다. 라고 하네요🤷
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="form-check1">
+                                    <select class="form-select" aria-label="Disabled select example" disabled>
+                                        <option selected>[팀]에 대한 설명 및 MBTI</option>
+                                    </select>
+
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="flexCheckCheckedDisabled" checked disabled>
+                                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                        서로 도우며 열심히 하는 팀! (너무 감사해요...💛)
+                                    </label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled"
+                                            disabled>
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                            김진희·ENTJ / 표지수·ISFP / 박주민·INTJ / 조아영·ESFP / 최종우·ISTP
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="form-check1">
+                                    <select class="form-select" aria-label="Disabled select example" disabled>
+                                        <option selected>객관적으로 살펴본 자신의 장점</option>
+                                    </select>
+
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="flexCheckCheckedDisabled" checked disabled>
+                                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                        열심히 한다!
+                                    </label>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled"
+                                            disabled>
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                            잘 때 빼고😥
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="form-check1">
+                                    <select class="form-select" aria-label="Disabled select example" disabled>
+                                        <option selected>우리 팀만의 특징과 목표</option>
+                                    </select>
+
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="flexCheckCheckedDisabled" checked disabled>
+                                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                        도움이 필요할 땐 서로가 나서서 같이 해결!
+                                    </label>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled"
+                                            disabled>
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                            노력은 하는데...💦 저도 도움이 됐으면 좋겠습니다!
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <select class="form-select" aria-label="Disabled select example" disabled>
+                                    <option selected>진희의 velog</option>
+                                </select>
+
+                                <br>
+                                <div class="jhveloglink">
+                                    <a href="https://velog.io/@heeh">
+                                        <p>👉 https://velog.io/@heeh<p>
+
+                                    </a>
+                                </div>
+
+
+
+
+                            </div>
+                        </td>
+
+                        <td rowspan="3" class="tg-0lax">
+                            <span class="jhslideshow-container">
+                                <div class="jhSlidesbackground">
+                                    <div class="jhmySlides fade">
+                                        <img src="/images/pt1.jpg" class="jhslideshow-image">
+                                    </div>
+                                    <div class="jhmySlides fade">
+                                        <img src="/images/pt2.jpg" class="jhslideshow-image">
+                                    </div>
+                                    <div class="jhmySlides fade">
+                                        <img src="/images/pt3.jpg" class="jhslideshow-image">
+                                    </div>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("jhmySlides");
+
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+
+                    setTimeout(showSlides, 3000); // 2초마다 이미지가 체인지됩니다
+                }
+
+            </script>
         </div>
-    </div>
 
 </body>
 
