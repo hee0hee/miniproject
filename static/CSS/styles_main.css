@@ -106,11 +106,11 @@
   }
   @-webkit-keyframes flashText {
     to {
-      opacity: 0.15;
+      opacity: 0.3;
     }
   }
   @keyframes flashText {
     to {
-      opacity: 0.15;
+      opacity: 0.3;
     }
   }

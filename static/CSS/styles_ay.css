@@ -6,7 +6,7 @@
     font-family: 'AYcard'; /*font 이름*/
     font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
     font-weight: 400; /* font 굵기 정의 */
-    src: url('../fonts/BR.otf');  /* 파일 위치 정의 */
+    src: url('/fonts/BR.otf');  /* 파일 위치 정의 */
 }
 /* 반짝 */
 @-webkit-keyframes sparkle {
