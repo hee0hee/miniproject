@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 from pymongo import MongoClient
+
+import certifi
+
+ca = certifi.where()
 client = MongoClient('mongodb+srv://sparta:test@cluster0.q7dgkca.mongodb.net/?retryWrites=true&w=majority')
 db = client.dbsparta
 
