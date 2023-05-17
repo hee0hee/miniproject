@@ -8,8 +8,6 @@ db = client.dbsparta
 import requests
 from bs4 import BeautifulSoup
 
-# 위 순서는 상관없다. flask에서 하고 있기 때문에 보기 좋게 가장 위에 올려놨을뿐!
-
 @app.route('/')
 def home():
     return render_template('main.html') 
