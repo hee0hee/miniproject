@@ -15,6 +15,12 @@ def home():
     return render_template('main.html') 
 # 우선 메인페이지 연결함
 
+@app.route('/page2')
+def page2():
+    return render_template('page2.html') 
+
+
+
 @app.route("/intro", methods=["POST"])
 def intro_post():
     comment_receive = request.form['comment_give']
