@@ -131,35 +131,35 @@
     }
 
     function posting() {
-        let comment = $('#comment').val()
+        let comment = $('#comment').val();
 
         let formData = new FormData();
         formData.append("comment_give", comment);
 
         fetch('/intro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-            alert(data['msg'])
-            window.location.reload()
+            alert(data['msg']);
+            window.location.reload();
         })
     }
 
     function listing() {
-            fetch('/intro').then((res) => res.json()).then((data) => {
-                let rows = data['result']
-                $('#comment-output').empty()
-                rows.forEach((a) => {
-                    let comment = a['comment']
+        fetch('/intro').then((res) => res.json()).then((data) => {
+            let rows = data['result'];
+            $('#comment-output').empty();
+            rows.forEach((a) => {
+                let comment = a['comment'];
 
-                    let temp_html = `<div class="card">
+                let temp_html = `<div class="card">
                                         <div class="card-body">
                                             <blockquote class="blockquote mb-0">
                                                 <p>${comment}</p>
                                             </blockquote>
                                         </div>
-                                    </div>`
-                    $('#comment-output').append(temp_html)
-                })
+                                    </div>`;
+                $('#comment-output').append(temp_html);
             })
-        }
+        })
+    }
 </script>
 
 <body>
@@ -248,7 +248,7 @@
                     <div class="jsleftwriting1">
                         백엔드를 준비하고 있는 집이 너무 좋은 집순이 ISFP입니다!<br>
                         <br>
-                        <p id="jsans2">👋저의 장점은?</p>
+                        <p id="jsans2">👏저의 장점은?</p>
                         ✔실행력! 한다고 마음먹었으면 잘 밀고 나가요.<br>
                         ✔불편한 일이 있을 때 바로 해결하려고 노력해요.
                     </div>
@@ -522,12 +522,14 @@
         </div>
 
         <!-- 댓글이 달리는 부분 -->
-        <div class="mycards" id="comment-output">
-            <div class="card">
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>여기에 댓글이 노출되어요.</p>
-                    </blockquote>
+        <div class="listwrapper">
+            <div class="mycards" id="comment-output">
+                <div class="card">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>여기에 댓글이 노출되어요.</p>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
