@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>댓글 다는 기능 구형</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            width: 50%;
+            height: 850px;
+            float: left;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/11681097/pexels-photo-11681097.jpeg?auto=compress&cs=tinysrgb&w=400');
+            background-position: center;
+            background-size: cover;
+            margin: 50px 0px 0px 50px;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypost {
+            width: 50%;
+            max-width: 500px;
+            margin: 50px 50px 0px 0px;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+            float: right;
+        }
+
+        .form-floating {
+            width: 90%;
+            margin: 0px auto 0px auto;
+            float: left;
+        }
+
+        .mybtns {
+            float: right;
+
+        }
+
+        .mycards {
+            float: right;
+            margin: 20px 50px 0px 0px;
+            width: 39%;
+        }
+
+        .card {
+            margin: 0px 0px 10px 0px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            listing();
+        });
+
+        function listing() {
+            fetch('/intro').then((res) => res.json()).then((data) => {
+                let rows = data['result']
+                rows.forEach((a) => {
+                    let comment = a['comment']
+
+                    let temp_html = `<div class="card">
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>${comment}</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>`
+                    $('#comment-list').append(temp_html)
+                })
+            })
+        }
+
+        function posting() {
+            let comment = $('#comment').val()
+            
+            let formData = new FormData();
+            formData.append("comment_give", comment);
+
+            fetch('/intro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+                alert(data['msg'])
+                window.location.reload()
+            })
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>댓글 달기 기능, 어떻게 디자인할까?</h1>
+    </div>
+    <div class="mypost" id="post-box">
+        <div class="input-group mb-3">
+            <input id="comment" type="text" class="form-control" placeholder="댓글을 달아주세요!" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <button onclick="posting()" class="btn btn-outline-secondary" type="button" id="button-addon2">√</button>
+        </div>
+    </div>
+    <div class="mycards" id="comment-list">
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>여기에 댓글이 노출되어요.</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
