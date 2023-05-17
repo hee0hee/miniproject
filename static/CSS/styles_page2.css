@@ -85,26 +85,24 @@ div:nth-child(5){
 }
 
 .btn1 {
+    width: 250px;
+    height: 200px;
     background-position: 40%, 0;
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
 
 }
 
-
 .btn1:hover {
-    /* font-style: normal;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold; */
-    /* background-position: 40%, 0; */
-    background-size: 135px 135px;
+    background-size: 250px 200px;
     background-image: url("../images/aymon.jpg");
 }
 
 .btn2 {
+    width: 250px;
+    height: 200px;
     background-position: 40%, 0;
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
 }
 
@@ -113,13 +111,15 @@ div:nth-child(5){
     text-decoration: none;
     color: #000000;
     font-weight: bold; */
-    background-size: 135px 135px;
+    background-size: 250px 200px;
     background-image: url("../images/jhmon.jpg");
 }
 
 .btn3 {
+    width: 250px;
+    height: 200px;
     background-position: 40%, 0;
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
     /* background: url(); background-size: cover; */
 }
@@ -129,14 +129,16 @@ div:nth-child(5){
     text-decoration: none;
     color: #000000;
     font-weight: bold; */
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("../images/jmmon.jpg");
 }
 
 
 .btn4 {
+    width: 250px;
+    height: 200px;
     background-position: 40%, 0;
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
     /* background: url(); background-size: cover; */
 }
@@ -146,14 +148,16 @@ div:nth-child(5){
     text-decoration: none;
     color: #000000;
     font-weight: bold; */
-    background-size: 135px 135px;
+    background-size: 250px 200px;
     background-image: url("../images/jsmon.png");
 }
 
 .btn5 {
+    width: 250px;
+    height: 200px;
     margin: auto;
     background-position: 40%, 0;
-    background-size: 140px 140px;
+    background-size: 250px 200px;
     background-image: url("https://images.imyfone.com/kr/assets/article/change-location/pokemonster-ditto.jpg");
     /* background: url(); background-size: cover; */
 }
