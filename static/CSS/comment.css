@@ -1,9 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
-#comment-body{
+#ay-comment-body{
     font-family: 'Poor Story', cursive;
     background-color: rgb(225, 255, 240);
-    margin: 20px auto 0px auto;
+    margin: 20px auto 20px auto;
+    padding:20px 0px 0px 0px;
+    width: 1200px;
+}
+
+#jw-comment-body{
+    font-family: 'Poor Story', cursive;
+    background-color: rgb(225, 255, 240);
+    margin: 20px auto 20px auto;
+    padding:20px 0px 0px 0px;
+    width: 1200px;
+}
+
+#js-comment-body{
+    font-family: 'Poor Story', cursive;
+    background-color: rgb(225, 255, 240);
+    margin: 20px auto 20px auto;
+    padding:20px 0px 0px 0px;
+    width: 1200px;
+}
+
+#jh-comment-body{
+    font-family: 'Poor Story', cursive;
+    background-color: rgb(225, 255, 240);
+    margin: 20px auto 20px auto;
+    padding:20px 0px 0px 0px;
+    width: 1200px;
+}
+
+#jm-comment-body{
+    font-family: 'Poor Story', cursive;
+    background-color: rgb(225, 255, 240);
+    margin: 20px auto 20px auto;
     padding:20px 0px 0px 0px;
     width: 1200px;
 }
@@ -22,7 +54,39 @@
     box-shadow: 1px 1px 6px 0px gray;
 }
 
-#comment-output {
+#aw-comment-output {
+    clear:both;
+    background-color: rgb(225, 255, 240);
+    margin: 0px auto 20px auto;
+    width: 1200px;
+    height: auto;
+}
+
+#jw-comment-output {
+    clear:both;
+    background-color: rgb(225, 255, 240);
+    margin: 0px auto 20px auto;
+    width: 1200px;
+    height: auto;
+}
+
+#js-comment-output {
+    clear:both;
+    background-color: rgb(225, 255, 240);
+    margin: 0px auto 20px auto;
+    width: 1200px;
+    height: auto;
+}
+
+#jh-comment-output {
+    clear:both;
+    background-color: rgb(225, 255, 240);
+    margin: 0px auto 20px auto;
+    width: 1200px;
+    height: auto;
+}
+
+#jm-comment-output {
     clear:both;
     background-color: rgb(225, 255, 240);
     margin: 0px auto 20px auto;
