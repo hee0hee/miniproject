@@ -1,4 +1,6 @@
 /* teamcard.html 관련 css */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+/* 종우 : 초기페이지에 맞는 폰트 넣었습니다. 타이틀에 적용함 */
 
 @font-face {
     font-family: 'AYcard'; /*font 이름*/
@@ -25,15 +27,20 @@
   }
 
     .title {
-        background: url("../images/link.jpg") no-repeat;
-        /* 배경 이미지 파일 내에서 읽어옴 */
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../images/link.jpg") no-repeat;
+        /* 배경 이미지 파일 내에서 읽어옴, + 배경이미지"만" 투명도 설정  */
         margin: 50px auto 30px auto;
         height: 200px;
         width: 1200px;
         text-align: center;
         /* 버튼 내의 글씨 가운데 정렬 > 정렬 나중에 수정 가능*/
-        color: white;
+        color: rgb(0, 255, 0);
         /* 글씨 색상 * > 수정 가능 */
+        font-size: 70px;
+        font-weight: 400;
+        padding: 45px 0px 0px 0px;
+        font-family: 'Hahmlet', serif
     }
 
     .list {
