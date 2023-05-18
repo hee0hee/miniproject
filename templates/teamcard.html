@@ -261,9 +261,20 @@
     function jslisting() {
         fetch('/jsintro').then((res) => res.json()).then((data) => {
             console.log(data['result']);
-            let rows = data['result'];
+            
+            // let rows = Array.from(data['result'], row => row);
+            let rows = JSON.parse(data['result']);
+            // let rows = data['result']; /*rows는 array가 아님*/
+            // console.log(Array.isArray(rows)); /*rows는 array니? false*/
+            console.log(rows)
+
             $('#js-comment-output').empty();
+            // console.log(rows);
+            for(let i=0;i<rows.length;i++){
+                console.log(rows[i]);
+            }
             rows.forEach((a) => {
+                console.log(a)
                 let jscomment = a['jscomment'];
 
                 let temp_html = `<div class="card">

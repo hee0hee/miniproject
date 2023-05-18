@@ -5,6 +5,8 @@ from pymongo import MongoClient
 client = MongoClient('mongodb+srv://b1team:intro@zelda.oqyai4s.mongodb.net/?retryWrites=true&w=majority')
 db = client.b1team
 
+from bson.json_util import dumps
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -89,9 +91,18 @@ def jwintro_get():
 
 @app.route("/jsintro", methods=["GET"])
 def jsintro_get():
-    all_jscomments = list(db.comment.find({"$and":[{"_id": True},{"jscomment":{"$exists": False}}]}))
-    print(all_jscomments)
-    return jsonify({'result':all_jscomments})
+    all_jscomments = list(db.comment.find({"jscomment": {"$exists": True}}))
+    result=dumps(all_jscomments)
+    # print(all_jscomments)
+    # print(dumps(all_jscomments))
+
+    # all_jscomments = list(db.comment.find(({"jscomment": {"$exists": True}})))
+    # b = [all_jscomments[i]["jscommensdsat"] for i in range(len(all_jscomments))]
+    # print(type(all_jscomments[0]))
+    # print(b)
+    # print(all_jscomments)
+    # return "b"
+    return jsonify({'result':result})
 
 @app.route("/jhintro", methods=["GET"])
 def jhintro_get():
