@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 @app.route('/')
 def home():
-    return render_template('teamcard.html') 
+    return render_template('main.html') 
 # 우선 메인페이지 연결함
 
 @app.route('/page2')
@@ -23,11 +23,9 @@ def page2():
 def team():
     return render_template('teamcard.html') 
 
-
 @app.route("/ayintro", methods=["POST"])
 def ayintro_post():
     aycomment_receive = request.form['aycomment_give']
-
     doc = {
         'aycomment':aycomment_receive
     }
@@ -81,38 +79,33 @@ def jmintro_post():
 
 @app.route("/ayintro", methods=["GET"])
 def ayintro_get():
-    all_aycomments = list(db.comment.find({},{'_id':False}))
-    return jsonify({'result':all_aycomments})
+    all_aycomments = list(db.comment.find({"aycomment": {"$exists": True}}))
+    result=dumps(all_aycomments)
+    return jsonify({'result':result})
 
 @app.route("/jwintro", methods=["GET"])
 def jwintro_get():
-    all_jwcomments = list(db.comment.find({},{'_id':False}))
-    return jsonify({'result':all_jwcomments})
+    all_jwcomments = list(db.comment.find({"jwcomment": {"$exists": True}}))
+    result=dumps(all_jwcomments)
+    return jsonify({'result':result})
 
 @app.route("/jsintro", methods=["GET"])
 def jsintro_get():
     all_jscomments = list(db.comment.find({"jscomment": {"$exists": True}}))
     result=dumps(all_jscomments)
-    # print(all_jscomments)
-    # print(dumps(all_jscomments))
-
-    # all_jscomments = list(db.comment.find(({"jscomment": {"$exists": True}})))
-    # b = [all_jscomments[i]["jscommensdsat"] for i in range(len(all_jscomments))]
-    # print(type(all_jscomments[0]))
-    # print(b)
-    # print(all_jscomments)
-    # return "b"
     return jsonify({'result':result})
 
 @app.route("/jhintro", methods=["GET"])
 def jhintro_get():
-    all_jhcomments = list(db.comment.find({},{'_id':False}))
-    return jsonify({'result':all_jhcomments})
+    all_jhcomments = list(db.comment.find({"jhcomment": {"$exists": True}}))
+    result=dumps(all_jhcomments)
+    return jsonify({'result':result})
 
 @app.route("/jmintro", methods=["GET"])
 def jmintro_get():
-    all_jmcomments = list(db.comment.find({},{'_id':False}))
-    return jsonify({'result':all_jmcomments})
+    all_jmcomments = list(db.comment.find({"jmcomment": {"$exists": True}}))
+    result=dumps(all_jmcomments)
+    return jsonify({'result':result})
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

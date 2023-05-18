@@ -222,9 +222,13 @@
 
     function aylisting() {
         fetch('/ayintro').then((res) => res.json()).then((data) => {
-            let rows = data['result'];
+            console.log(data['result']);
+            let rows = JSON.parse(data['result']);
+            console.log(rows)
             $('#ay-comment-output').empty();
+            
             rows.forEach((a) => {
+                console.log(a)
                 let aycomment = a['aycomment'];
 
                 let temp_html = `<div class="card">
@@ -241,9 +245,13 @@
 
     function jwlisting() {
         fetch('/jwintro').then((res) => res.json()).then((data) => {
-            let rows = data['result'];
+            console.log(data['result']);
+            let rows = JSON.parse(data['result']);
+            console.log(rows)
             $('#jw-comment-output').empty();
+            
             rows.forEach((a) => {
+                console.log(a)
                 let jwcomment = a['jwcomment'];
 
                 let temp_html = `<div class="card">
@@ -261,18 +269,10 @@
     function jslisting() {
         fetch('/jsintro').then((res) => res.json()).then((data) => {
             console.log(data['result']);
-            
-            // let rows = Array.from(data['result'], row => row);
             let rows = JSON.parse(data['result']);
-            // let rows = data['result']; /*rows는 array가 아님*/
-            // console.log(Array.isArray(rows)); /*rows는 array니? false*/
             console.log(rows)
-
             $('#js-comment-output').empty();
-            // console.log(rows);
-            for(let i=0;i<rows.length;i++){
-                console.log(rows[i]);
-            }
+            
             rows.forEach((a) => {
                 console.log(a)
                 let jscomment = a['jscomment'];
@@ -291,9 +291,13 @@
 
     function jhlisting() {
         fetch('/jhintro').then((res) => res.json()).then((data) => {
-            let rows = data['result'];
+            console.log(data['result']);
+            let rows = JSON.parse(data['result']);
+            console.log(rows)
             $('#jh-comment-output').empty();
+            
             rows.forEach((a) => {
+                console.log(a)
                 let jhcomment = a['jhcomment'];
 
                 let temp_html = `<div class="card">
@@ -310,9 +314,13 @@
 
     function jmlisting() {
         fetch('/jmintro').then((res) => res.json()).then((data) => {
-            let rows = data['result'];
+            console.log(data['result']);
+            let rows = JSON.parse(data['result']);
+            console.log(rows)
             $('#jm-comment-output').empty();
+            
             rows.forEach((a) => {
+                console.log(a)
                 let jmcomment = a['jmcomment'];
 
                 let temp_html = `<div class="card">
@@ -353,6 +361,7 @@
                     , width="200px">
             </button></td>
     </table>
+    
     <div class="cards">
         <div class="aycard">
             <h1> ✨ALL ABOUT 조아영✨</h1>
@@ -673,6 +682,7 @@
             </script>
         </div>
     </div>
+
     <div id="ay-comment-body">
 
         <p id="comment-title">아영님 소개 페이지를 보고 느낀 점을 적어주세요! (✿◡‿◡)</p>
