@@ -5,6 +5,8 @@ from pymongo import MongoClient
 client = MongoClient('mongodb+srv://b1team:intro@zelda.oqyai4s.mongodb.net/?retryWrites=true&w=majority')
 db = client.b1team
 
+from bson.json_util import dumps
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -21,15 +23,13 @@ def page2():
 def team():
     return render_template('teamcard.html') 
 
-
 @app.route("/ayintro", methods=["POST"])
 def ayintro_post():
     aycomment_receive = request.form['aycomment_give']
-
     doc = {
         'aycomment':aycomment_receive
     }
-    db.aycomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'아영님께 댓글 남기기 완료!'})
 
@@ -40,7 +40,7 @@ def jwintro_post():
     doc = {
         'jwcomment':jwcomment_receive
     }
-    db.jwcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'종우님께 댓글 남기기 완료!'})
 
@@ -51,7 +51,7 @@ def jsintro_post():
     doc = {
         'jscomment':jscomment_receive
     }
-    db.jscomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'지수님께 댓글 남기기 완료!'})
 
@@ -62,7 +62,7 @@ def jhintro_post():
     doc = {
         'jhcomment':jhcomment_receive
     }
-    db.jhcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'진희님께 댓글 남기기 완료!'})
 
@@ -73,34 +73,39 @@ def jmintro_post():
     doc = {
         'jmcomment':jmcomment_receive
     }
-    db.jmcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'주민님께 댓글 남기기 완료!'})
 
 @app.route("/ayintro", methods=["GET"])
 def ayintro_get():
-    all_aycomments = list(db.aycomment.find({},{'_id':False}))
-    return jsonify({'result':all_aycomments})
+    all_aycomments = list(db.comment.find({"aycomment": {"$exists": True}}))
+    result=dumps(all_aycomments)
+    return jsonify({'result':result})
 
 @app.route("/jwintro", methods=["GET"])
 def jwintro_get():
-    all_jwcomments = list(db.jwcomment.find({},{'_id':False}))
-    return jsonify({'result':all_jwcomments})
+    all_jwcomments = list(db.comment.find({"jwcomment": {"$exists": True}}))
+    result=dumps(all_jwcomments)
+    return jsonify({'result':result})
 
 @app.route("/jsintro", methods=["GET"])
 def jsintro_get():
-    all_jscomments = list(db.jscomment.find({},{'_id':False}))
-    return jsonify({'result':all_jscomments})
+    all_jscomments = list(db.comment.find({"jscomment": {"$exists": True}}))
+    result=dumps(all_jscomments)
+    return jsonify({'result':result})
 
 @app.route("/jhintro", methods=["GET"])
 def jhintro_get():
-    all_jhcomments = list(db.jhcomment.find({},{'_id':False}))
-    return jsonify({'result':all_jhcomments})
+    all_jhcomments = list(db.comment.find({"jhcomment": {"$exists": True}}))
+    result=dumps(all_jhcomments)
+    return jsonify({'result':result})
 
 @app.route("/jmintro", methods=["GET"])
 def jmintro_get():
-    all_jmcomments = list(db.jmcomment.find({},{'_id':False}))
-    return jsonify({'result':all_jmcomments})
+    all_jmcomments = list(db.comment.find({"jmcomment": {"$exists": True}}))
+    result=dumps(all_jmcomments)
+    return jsonify({'result':result})
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
