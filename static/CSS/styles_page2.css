@@ -112,7 +112,7 @@ div:nth-child(5){
     color: #000000;
     font-weight: bold; */
     background-size: 250px 200px;
-    background-image: url("../images/jhmon.jpg");
+    background-image: url("../images/jwmon.jpg");
 }
 
 .btn3 {
@@ -124,13 +124,14 @@ div:nth-child(5){
     /* background: url(); background-size: cover; */
 }
 
-.btn3:hover {
+.btn3:hover {    
     /* font-style: normal;
     text-decoration: none;
     color: #000000;
     font-weight: bold; */
     background-size: 250px 200px;
-    background-image: url("../images/jmmon.jpg");
+    background-image: url("../images/jsmon.png");
+
 }
 
 
@@ -149,7 +150,7 @@ div:nth-child(5){
     color: #000000;
     font-weight: bold; */
     background-size: 250px 200px;
-    background-image: url("../images/jsmon.png");
+    background-image: url("../images/jhmon.jpg");
 }
 
 .btn5 {
@@ -163,10 +164,10 @@ div:nth-child(5){
 }
 
 .btn5:hover {
-    /* font-style: normal;
+        /* font-style: normal;
     text-decoration: none;
     color: #000000;
     font-weight: bold; */
     background-size: 250px 200px;
-    background-image: url("../images/jwmon.jpg");
+    background-image: url("../images/jmmon.jpg");
 }
