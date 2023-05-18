@@ -29,7 +29,7 @@ def ayintro_post():
     doc = {
         'aycomment':aycomment_receive
     }
-    db.aycomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'아영님께 댓글 남기기 완료!'})
 
@@ -40,7 +40,7 @@ def jwintro_post():
     doc = {
         'jwcomment':jwcomment_receive
     }
-    db.jwcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'종우님께 댓글 남기기 완료!'})
 
@@ -51,7 +51,7 @@ def jsintro_post():
     doc = {
         'jscomment':jscomment_receive
     }
-    db.jscomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'지수님께 댓글 남기기 완료!'})
 
@@ -62,7 +62,7 @@ def jhintro_post():
     doc = {
         'jhcomment':jhcomment_receive
     }
-    db.jhcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'진희님께 댓글 남기기 완료!'})
 
@@ -73,33 +73,33 @@ def jmintro_post():
     doc = {
         'jmcomment':jmcomment_receive
     }
-    db.jmcomment.insert_one(doc)
+    db.comment.insert_one(doc)
 
     return jsonify({'msg':'주민님께 댓글 남기기 완료!'})
 
 @app.route("/ayintro", methods=["GET"])
 def ayintro_get():
-    all_aycomments = list(db.aycomment.find({},{'_id':False}))
+    all_aycomments = list(db.comment.find({},{'_id':False}))
     return jsonify({'result':all_aycomments})
 
 @app.route("/jwintro", methods=["GET"])
 def jwintro_get():
-    all_jwcomments = list(db.jwcomment.find({},{'_id':False}))
+    all_jwcomments = list(db.comment.find({},{'_id':False}))
     return jsonify({'result':all_jwcomments})
 
 @app.route("/jsintro", methods=["GET"])
 def jsintro_get():
-    all_jscomments = list(db.jscomment.find({},{'_id':False}))
+    all_jscomments = list(db.comment.find({'_id':False},{'jscomment'}))
     return jsonify({'result':all_jscomments})
 
 @app.route("/jhintro", methods=["GET"])
 def jhintro_get():
-    all_jhcomments = list(db.jhcomment.find({},{'_id':False}))
+    all_jhcomments = list(db.comment.find({},{'_id':False}))
     return jsonify({'result':all_jhcomments})
 
 @app.route("/jmintro", methods=["GET"])
 def jmintro_get():
-    all_jmcomments = list(db.jmcomment.find({},{'_id':False}))
+    all_jmcomments = list(db.comment.find({},{'_id':False}))
     return jsonify({'result':all_jmcomments})
 
 if __name__ == '__main__':
