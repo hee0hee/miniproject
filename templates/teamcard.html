@@ -162,87 +162,103 @@
 
     function ayposting() {
         let aycomment = $('#aycomment').val();
+        let ayname = $('#ayname').val();
 
         let formData = new FormData();
         formData.append("aycomment_give", aycomment);
+        formData.append("ayname_give", ayname);
 
         fetch('/ayintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
             Buttonreload("member1");
             $('#aycomment').val('');
+            $('#ayname').val('');
         })
     }
 
     function jwposting() {
         let jwcomment = $('#jwcomment').val();
+        let jwname = $('#jwname').val();
 
         let formData = new FormData();
         formData.append("jwcomment_give", jwcomment);
+        formData.append("jwname_give", jwname);
 
         fetch('/jwintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
             Buttonreload("member2");
             $('#jwcomment').val('');
+            $('#jwname').val('');
         })
     }
 
     function jsposting() {
         let jscomment = $('#jscomment').val();
+        let jsname = $('#jsname').val();
 
         let formData = new FormData();
         formData.append("jscomment_give", jscomment);
+        formData.append("jsname_give", jsname);
 
         fetch('/jsintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
             Buttonreload("member3");
             $('#jscomment').val('');
+            $('#jsname').val('');
         })
     }
 
     function jhposting() {
         let jhcomment = $('#jhcomment').val();
+        let jhname = $('#jhname').val();
 
         let formData = new FormData();
         formData.append("jhcomment_give", jhcomment);
+        formData.append("jhname_give", jhname);
 
         fetch('/jhintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
             Buttonreload("member4");
             $('#jhcomment').val('');
+            $('#jhname').val('');
         })
     }
 
     function jmposting() {
         let jmcomment = $('#jmcomment').val();
+        let jmname = $('#jmname').val();
 
         let formData = new FormData();
         formData.append("jmcomment_give", jmcomment);
+        formData.append("jmname_give", jmname);
 
         fetch('/jmintro', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
             alert(data['msg']);
             Buttonreload("default");
             $('#jmcomment').val('');
+            $('#jmname').val('');
         })
     }
 
     function aylisting() {
         fetch('/ayintro').then((res) => res.json()).then((data) => {
-            console.log(data['result']);
             let rows = JSON.parse(data['result']);
-            console.log(rows)
+            console.log(rows);
             $('#ay-comment-output').empty();
-            
             rows.forEach((a) => {
                 console.log(a)
                 let aycomment = a['aycomment'];
+                let ayname = a['ayname'];
 
                 let temp_html = `<div class="card">
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>${aycomment}</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>`;
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p id="commentchar">${aycomment}</p>
+                                            <footer class="blockquote-footer">${ayname}</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>`;
+
                 $('#ay-comment-output').append(temp_html);
             })
         })
@@ -250,22 +266,23 @@
 
     function jwlisting() {
         fetch('/jwintro').then((res) => res.json()).then((data) => {
-            console.log(data['result']);
             let rows = JSON.parse(data['result']);
-            console.log(rows)
+            console.log(rows);
             $('#jw-comment-output').empty();
-            
             rows.forEach((a) => {
                 console.log(a)
                 let jwcomment = a['jwcomment'];
+                let jwname = a['jwname'];
 
                 let temp_html = `<div class="card">
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>${jwcomment}</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>`;
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p id="commentchar">${jwcomment}</p>
+                                            <footer class="blockquote-footer">${jwname}</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>`;
+
                 $('#jw-comment-output').append(temp_html);
             })
         })
@@ -273,22 +290,23 @@
 
     function jslisting() {
         fetch('/jsintro').then((res) => res.json()).then((data) => {
-            console.log(data['result']);
             let rows = JSON.parse(data['result']);
-            console.log(rows)
+            console.log(rows);
             $('#js-comment-output').empty();
-            
             rows.forEach((a) => {
                 console.log(a)
                 let jscomment = a['jscomment'];
+                let jsname = a['jsname'];
 
                 let temp_html = `<div class="card">
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>${jscomment}</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>`;
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p id="commentchar">${jscomment}</p>
+                                            <footer class="blockquote-footer">${jsname}</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>`;
+
                 $('#js-comment-output').append(temp_html);
             })
         })
@@ -296,22 +314,23 @@
 
     function jhlisting() {
         fetch('/jhintro').then((res) => res.json()).then((data) => {
-            console.log(data['result']);
             let rows = JSON.parse(data['result']);
-            console.log(rows)
+            console.log(rows);
             $('#jh-comment-output').empty();
-            
             rows.forEach((a) => {
                 console.log(a)
                 let jhcomment = a['jhcomment'];
+                let jhname = a['jhname'];
 
                 let temp_html = `<div class="card">
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>${jhcomment}</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>`;
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p id="commentchar">${jhcomment}</p>
+                                            <footer class="blockquote-footer">${jhname}</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>`;
+
                 $('#jh-comment-output').append(temp_html);
             })
         })
@@ -319,22 +338,23 @@
 
     function jmlisting() {
         fetch('/jmintro').then((res) => res.json()).then((data) => {
-            console.log(data['result']);
             let rows = JSON.parse(data['result']);
-            console.log(rows)
+            console.log(rows);
             $('#jm-comment-output').empty();
-            
             rows.forEach((a) => {
                 console.log(a)
                 let jmcomment = a['jmcomment'];
+                let jmname = a['jmname'];
 
                 let temp_html = `<div class="card">
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>${jmcomment}</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>`;
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p id="commentchar">${jmcomment}</p>
+                                            <footer class="blockquote-footer">${jmname}</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>`;
+
                 $('#jm-comment-output').append(temp_html);
             })
         })
@@ -366,7 +386,7 @@
                     , width="200px">
             </button></td>
     </table>
-    
+
     <div class="cards">
         <div class="aycard">
             <h1> ✨ALL ABOUT 조아영✨</h1>
@@ -703,24 +723,35 @@
 
         <p id="comment-title">아영님께 댓글 달기! (✿◡‿◡)</p>
 
-        <!-- 코멘트가 달리는 곳 -->
-        <div class="mypost" id="comment-input-box">
-            <div class="input-group mb-3">
-                <input id="aycomment" type="text" class="form-control" placeholder="댓글을 달아주세요!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="ayposting()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">✔</button>
+        <!-- 코멘트 인풋 -->
+        <div id="comment-input">
+
+            <div class="form-floating mb-3" id="name-box">
+                <input type="text" class="form-control" placeholder="url" id="ayname"/>
+                <label for="floatingInput" style="font-size:24px; color: rgb(60, 60, 60);">Name</label>
             </div>
+
+            <div class="form-floating mb-3" id="comment-box">
+                <input type="text" class="form-control" placeholder="url" id="aycomment" />
+                <label for="floatingInput" style="font-size: 24px; color: rgb(60, 60, 60);">Comment</label>
+            </div>
+
+            <div class="mypost" id="button-box">
+                <button onclick="ayposting()" class="btn btn-outline-secondary btn-lg"
+                        style = "font-size: 26px;" type="button" id="commitbut">✔</button>
+
+            </div>
+
         </div>
 
-        <!-- 댓글이 달리는 부분 -->
-
+        <!-- 코멘트 아웃풋 -->
         <div class="mycards" id="ay-comment-output">
 
             <div class="card">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p id="commentchar">여기에 댓글이 노출되어요.</p>
+                        <footer class="blockquote-footer">익명</footer>
                     </blockquote>
                 </div>
             </div>
@@ -737,24 +768,35 @@
 
         <p id="comment-title">종우님께 댓글 달기! (✿◡‿◡)</p>
 
-        <!-- 코멘트가 달리는 곳 -->
-        <div class="mypost" id="comment-input-box">
-            <div class="input-group mb-3">
-                <input id="jwcomment" type="text" class="form-control" placeholder="댓글을 달아주세요!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="jwposting()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">✔</button>
+        <!-- 코멘트 인풋 -->
+        <div id="comment-input">
+
+            <div class="form-floating mb-3" id="name-box">
+                <input type="text" class="form-control" placeholder="url" id="jwname"/>
+                <label for="floatingInput" style="font-size:24px; color: rgb(60, 60, 60);">Name</label>
             </div>
+
+            <div class="form-floating mb-3" id="comment-box">
+                <input type="text" class="form-control" placeholder="url" id="jwcomment" />
+                <label for="floatingInput" style="font-size: 24px; color: rgb(60, 60, 60);">Comment</label>
+            </div>
+
+            <div class="mypost" id="button-box">
+                <button onclick="jwposting()" class="btn btn-outline-secondary btn-lg"
+                        style = "font-size: 26px;" type="button" id="commitbut">✔</button>
+
+            </div>
+
         </div>
 
-        <!-- 댓글이 달리는 부분 -->
-
+        <!-- 코멘트 아웃풋 -->
         <div class="mycards" id="jw-comment-output">
 
             <div class="card">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p id="commentchar">여기에 댓글이 노출되어요.</p>
+                        <footer class="blockquote-footer">익명</footer>
                     </blockquote>
                 </div>
             </div>
@@ -771,24 +813,35 @@
 
         <p id="comment-title">지수님께 댓글 달기! (✿◡‿◡)</p>
 
-        <!-- 코멘트가 달리는 곳 -->
-        <div class="mypost" id="comment-input-box">
-            <div class="input-group mb-3">
-                <input id="jscomment" type="text" class="form-control" placeholder="댓글을 달아주세요!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="jsposting()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">✔</button>
+        <!-- 코멘트 인풋 -->
+        <div id="comment-input">
+
+            <div class="form-floating mb-3" id="name-box">
+                <input type="text" class="form-control" placeholder="url" id="jsname"/>
+                <label for="floatingInput" style="font-size:24px; color: rgb(60, 60, 60);">Name</label>
             </div>
+
+            <div class="form-floating mb-3" id="comment-box">
+                <input type="text" class="form-control" placeholder="url" id="jscomment" />
+                <label for="floatingInput" style="font-size: 24px; color: rgb(60, 60, 60);">Comment</label>
+            </div>
+
+            <div class="mypost" id="button-box">
+                <button onclick="jsposting()" class="btn btn-outline-secondary btn-lg"
+                        style = "font-size: 26px;" type="button" id="commitbut">✔</button>
+
+            </div>
+
         </div>
 
-        <!-- 댓글이 달리는 부분 -->
-
+        <!-- 코멘트 아웃풋 -->
         <div class="mycards" id="js-comment-output">
 
             <div class="card">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p id="commentchar">여기에 댓글이 노출되어요.</p>
+                        <footer class="blockquote-footer">익명</footer>
                     </blockquote>
                 </div>
             </div>
@@ -805,24 +858,35 @@
 
         <p id="comment-title">진희님께 댓글 달기! (✿◡‿◡)</p>
 
-        <!-- 코멘트가 달리는 곳 -->
-        <div class="mypost" id="comment-input-box">
-            <div class="input-group mb-3">
-                <input id="jhcomment" type="text" class="form-control" placeholder="댓글을 달아주세요!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="jhposting()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">✔</button>
+        <!-- 코멘트 인풋 -->
+        <div id="comment-input">
+
+            <div class="form-floating mb-3" id="name-box">
+                <input type="text" class="form-control" placeholder="url" id="jhname"/>
+                <label for="floatingInput" style="font-size:24px; color: rgb(60, 60, 60);">Name</label>
             </div>
+
+            <div class="form-floating mb-3" id="comment-box">
+                <input type="text" class="form-control" placeholder="url" id="jhcomment" />
+                <label for="floatingInput" style="font-size: 24px; color: rgb(60, 60, 60);">Comment</label>
+            </div>
+
+            <div class="mypost" id="button-box">
+                <button onclick="jhposting()" class="btn btn-outline-secondary btn-lg"
+                        style = "font-size: 26px;" type="button" id="commitbut">✔</button>
+
+            </div>
+
         </div>
 
-        <!-- 댓글이 달리는 부분 -->
-
+        <!-- 코멘트 아웃풋 -->
         <div class="mycards" id="jh-comment-output">
 
             <div class="card">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p id="commentchar">여기에 댓글이 노출되어요.</p>
+                        <footer class="blockquote-footer">익명</footer>
                     </blockquote>
                 </div>
             </div>
@@ -839,24 +903,35 @@
 
         <p id="comment-title">주민님께 댓글 달기! (✿◡‿◡)</p>
 
-        <!-- 코멘트가 달리는 곳 -->
-        <div class="mypost" id="comment-input-box">
-            <div class="input-group mb-3">
-                <input id="jmcomment" type="text" class="form-control" placeholder="댓글을 달아주세요!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="jmposting()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">✔</button>
+        <!-- 코멘트 인풋 -->
+        <div id="comment-input">
+
+            <div class="form-floating mb-3" id="name-box">
+                <input type="text" class="form-control" placeholder="url" id="jmname"/>
+                <label for="floatingInput" style="font-size:24px; color: rgb(60, 60, 60);">Name</label>
             </div>
+
+            <div class="form-floating mb-3" id="comment-box">
+                <input type="text" class="form-control" placeholder="url" id="jmcomment" />
+                <label for="floatingInput" style="font-size: 24px; color: rgb(60, 60, 60);">Comment</label>
+            </div>
+
+            <div class="mypost" id="button-box">
+                <button onclick="jmposting()" class="btn btn-outline-secondary btn-lg"
+                        style = "font-size: 26px;" type="button" id="commitbut">✔</button>
+
+            </div>
+
         </div>
 
-        <!-- 댓글이 달리는 부분 -->
-
+        <!-- 코멘트 아웃풋 -->
         <div class="mycards" id="jm-comment-output">
 
             <div class="card">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p id="commentchar">여기에 댓글이 노출되어요.</p>
+                        <footer class="blockquote-footer">익명</footer>
                     </blockquote>
                 </div>
             </div>

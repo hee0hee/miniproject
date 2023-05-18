@@ -30,18 +30,22 @@ def team():
 @app.route("/ayintro", methods=["POST"])
 def ayintro_post():
     aycomment_receive = request.form['aycomment_give']
+    ayname_receive = request.form['ayname_give']
+
     doc = {
+        'ayname' : ayname_receive,
         'aycomment':aycomment_receive
     }
     db.comment.insert_one(doc)
-
     return jsonify({'msg':'아영님께 댓글 남기기 완료!'})
 
 @app.route("/jwintro", methods=["POST"])
 def jwintro_post():
     jwcomment_receive = request.form['jwcomment_give']
+    jwname_receive = request.form['jwname_give']
 
     doc = {
+        'jwname' : jwname_receive,
         'jwcomment':jwcomment_receive
     }
     db.comment.insert_one(doc)
@@ -51,8 +55,10 @@ def jwintro_post():
 @app.route("/jsintro", methods=["POST"])
 def jsintro_post():
     jscomment_receive = request.form['jscomment_give']
+    jsname_receive = request.form['jsname_give']
 
     doc = {
+        'jsname' : jsname_receive,
         'jscomment':jscomment_receive
     }
     db.comment.insert_one(doc)
@@ -62,8 +68,10 @@ def jsintro_post():
 @app.route("/jhintro", methods=["POST"])
 def jhintro_post():
     jhcomment_receive = request.form['jhcomment_give']
+    jhname_receive = request.form['jhname_give']
 
     doc = {
+        'jhname' : jhname_receive,
         'jhcomment':jhcomment_receive
     }
     db.comment.insert_one(doc)
@@ -73,8 +81,10 @@ def jhintro_post():
 @app.route("/jmintro", methods=["POST"])
 def jmintro_post():
     jmcomment_receive = request.form['jmcomment_give']
+    jmname_receive = request.form['jmname_give']
 
     doc = {
+        'jmname' : jmname_receive,
         'jmcomment':jmcomment_receive
     }
     db.comment.insert_one(doc)
