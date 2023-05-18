@@ -6,8 +6,8 @@ from pymongo import MongoClient
 import certifi
 
 ca = certifi.where()
-client = MongoClient('mongodb+srv://JongWoo:use9563@mini.uajgqga.mongodb.net/?retryWrites=true&w=majority  ')
-db = client.dbsparta
+client = MongoClient('mongodb+srv://b1team:intro@zelda.oqyai4s.mongodb.net/?retryWrites=true&w=majority')
+db = client.b1team
 
 import requests
 from bs4 import BeautifulSoup
