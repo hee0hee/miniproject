@@ -89,7 +89,8 @@ def jwintro_get():
 
 @app.route("/jsintro", methods=["GET"])
 def jsintro_get():
-    all_jscomments = list(db.comment.find({'_id':False},{'jscomment'}))
+    all_jscomments = list(db.comment.find({"$and":[{"_id": True},{"jscomment":{"$exists": False}}]}))
+    print(all_jscomments)
     return jsonify({'result':all_jscomments})
 
 @app.route("/jhintro", methods=["GET"])
