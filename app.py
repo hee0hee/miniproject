@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 from pymongo import MongoClient
+
+import certifi
+
+ca = certifi.where()
 client = MongoClient('mongodb+srv://b1team:intro@zelda.oqyai4s.mongodb.net/?retryWrites=true&w=majority')
 db = client.b1team
 

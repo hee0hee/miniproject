@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\muvne\OneDrive\문서\GitHub\miniproject\venv"
+VIRTUAL_ENV="C:\Users\USER\Desktop\sparta\miniproject\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
