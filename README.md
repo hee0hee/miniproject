@@ -6,7 +6,7 @@ miniproject♡ <br>
 # 사용언어
 - HTML, CSS, javascript, python
 
-- [프로젝트 사이트](http://intro3.eba-p9ka6mdm.ap-northeast-2.elasticbeanstalk.com/) <br>
+# [프로젝트 사이트](http://intro3.eba-p9ka6mdm.ap-northeast-2.elasticbeanstalk.com/) <br>
 
 - page main
 ![](https://velog.velcdn.com/images/heeh/post/8961584e-335e-40fa-9b40-60516e4e36c2/image.png)
